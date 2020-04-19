@@ -1,0 +1,63 @@
+html {
+    font-family: "Lucida Console", Monaco, monospace;
+
+    scroll-behavior: smooth;
+}
+.nav-item {
+    transition: transform .3s;
+    text-align: right;
+}
+.nav-item:hover {
+    transform: scale(1.05);
+}
+nav a img {
+    height: 40px;
+
+    transition: transform .3s;
+}
+nav a img:hover {
+    transform: scale(1.3);
+}
+.navbar-nav > li {
+    margin-bottom: 5px;
+    margin-left: 80px;
+
+    font-size: 17px;
+}
+nav ul {
+    text-align: center;
+}
+div.content header.texts h1 {
+    font-size: 50px;
+    font-weight: bold;
+
+    background: -webkit-linear-gradient(#4c7cfe, black);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+div.content {
+    padding: 100px 0 0 0;
+
+    text-align: center;
+}
+section.icons div {
+    display: inline-block;
+    padding: 10px 20px 0 0;
+
+    list-style: none;
+}
+section.icons div li a img {
+    height: 20px;
+
+    transition: transform .2s;
+}
+section.icons div li a img:hover {
+    transform: scale(1.5);
+}
+body {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

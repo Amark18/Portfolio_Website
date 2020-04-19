@@ -1,0 +1,76 @@
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/mainpage.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/projects.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/aboutme.css' %}">
+		{% block content %}
+			<!-- contains navbar and contact modal or dialog-->
+			{% include 'mainpage/navbar.html' %}
+		{% endblock %}
+	</head>
+	
+	<!-- Top of page -->
+	<body class="main">
+		<div class="content">
+			<header class="texts">
+				<h1>Amar Khanshali</h1>
+				<p>Programmer | Eater of Sweets</p>
+			</header>
+			<section class="icons">
+				<div>
+					<li>
+						<a href="https://github.com/Amark18" target="_blank">
+							<img src="{% static 'images/github.png' %}"/>
+						</a>
+					</li>
+				</div>
+				<div>
+					<li>
+						<a href="https://www.linkedin.com/in/amar-khanshali" target="_blank">
+							<img src="{% static 'images/linkedin.png' %}"/>
+						</a>
+					</li>
+				</div>
+			</section>
+		</div>
+		<!-- About me -->
+		<div id="about">
+			<div class="card text-center bg-dark mb-3">
+				<div class="card-header">
+					Amar Khanshali
+				</div>
+				<div class="card-body">
+					<img class="card-img-top" src="{% static 'images/amar_khanshali.png' %}" alt="Card image cap">
+					<h5 class="card-title">About me:</h5>
+					<p class="card-text">Hello! I'm Amar, a Computer Science student currently attending San Diego State University,
+					who likes to develop mobile applications. That's it.</p>
+				</div>
+				<div class="card-footer text-muted">
+					PlEaSe GiVe Me JoB
+				</div>
+			</div>
+		</div>
+		
+		<!-- Projects -->
+		<div class="projects" id="projects">
+			<div class="projects-title">
+				<h1 style="font-weight: bold">Projects</h1>
+			</div>
+			<div class="card-columns">
+				{% for project in projects %}
+					<div class="card  border-dark">
+						<img class="card-img" src="{% static project.image %}">
+						<div class="card-body">
+							<h5 class="card-title">{{ project.title }}</h5>
+							<p class="card-text">{{ project.short_description }}</p>
+							<a  href="{% url 'project_detail' project.pk %}" class="btn btn-primary mr-auto">Read More</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="{% static 'js/dialog.js' %}"></script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+.card-columns {
+    margin: 10px;
+    @include media-breakpoint-only(lg) {
+        column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+        column-count: 5;
+    }
+}
+.projects-title {
+    margin: 500px 0 40px 0;
+
+    text-align: center;
+}
+.card-body button {
+    color: black;
+}
