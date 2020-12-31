@@ -12,26 +12,38 @@
 	<!-- Projects -->
 	<body class="main">
 		{% block page_content %}
-			<div class="card mb-3 border-primary">
-				<div class="card-header">
-					<h2>
-					{{ project.title }}
-					</h2>
-				</div>
-				<img class="card-img-top" src="{% static project.image %}" alt="Card image cap">
-				<div class="card-body border-0">
-					<h5 class="card-text">About the project:</h5>
-					<p class="card-text">{{ project.short_description }}</p>
-					<h5 class="card-text">Technologies used:</h5>
-					<p class="card-text">{{ project.technology }}</p>
-					<h5 class="card-text">Database used:</h5>
-					<p class="card-text">{{ project.database }}</p>
-					<h5 class="card-text">Code link:</h5>
-					<a href="{{ project.github_link }}" target="_blank">{{ project.github_link }}</a>
-					<p class="card-text"></p> <!--empty space-->
-					<a href="/#projects" class="btn btn-primary btn-lg btn-block">View Others</a>
-					<div class="card-updated">
-						<p><small class="text-muted">Last updated April 2020</small></p>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 mt-3">
+						<div class="card border-0">
+							<div class="card-horizontal">
+								<div class="card-header">
+									<h2>
+									{{ project.title }}
+									</h2>
+								</div>
+								<div class="card-image">
+									<img class="img-responsive" src="{% static project.image %}" style="max-width:750px;">
+								</div>
+								<div class="card-body">
+									<h5 class="card-text">About the project:</h5>
+									<p class="card-text">{{ project.short_description }}</p>
+									<h5 class="card-text">Technologies used:</h5>
+									<p class="card-text">{{ project.technology }}</p>
+									<h5 class="card-text">Database used:</h5>
+									<p class="card-text">{{ project.database }}</p>
+									<h5 class="card-text">View Code in Detail & Photos:</h5>
+									<a href="{{ project.github_link }}" target="_blank">{{ project.github_link }}</a>
+									<p class="card-text"></p> <!--empty space-->
+									<div class="card-updated">
+										<div class="card-button">
+											<a href="/#projects" class="btn btn-primary btn-lg btn-block">View Others</a>
+										</div>
+										<p><small class="text-muted">Last updated April 2020</small></p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
