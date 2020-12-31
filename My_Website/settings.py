@@ -25,7 +25,7 @@ SECRET_KEY = '-y&hj+@slp+dd@9r699zf&$(-x+=q(kjk)b#3w8#3s5=-!u$yd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['amarkhanshali.me']
 
 
 # Application definition
